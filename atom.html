@@ -12,50 +12,46 @@ body {
   margin: 0;
 }
 
-.heart {
+.cat {
   position: relative;
   width: 100px;
   height: 90px;
 }
 
-.heart::before, .heart::after {
+.cat::before, .cat::after {
   content: "";
   position: absolute;
   top: 40px;
   width: 52px;
   height: 80px;
   border-radius: 50px 50px 0 0;
-  background: red;
 }
 
-.heart::before {
-  left: 50px;
-  transform: rotate(-45deg);
+.cat::before {
+  left: -30px;
 }
 
-.heart::after {
-  left: 0;
-  transform: rotate(45deg);
+.cat::after {
+  right: -30px;
 }
 
-.flying-word {
+.cat-body {
     position:absolute; 
-    animation-name:flying; 
-    animation-duration:5s; 
-    animation-iteration-count:infinite; 
-    animation-timing-function:linear; 
-}
-
-@keyframes flying {
-    from {left:-50px; top:-50px;}
-    to {left:100%; top:100%;}
+    top:60%; 
+    left:50%; 
+    transform:translate(-50%, -50%); 
+    width:60px; 
+    height:80px; 
+    background:#333; 
+    border-radius:50%; 
 }
 </style>
 </head>
 <body>
 
-<div class="heart"></div>
-<div class="flying-word">优</div>
+<div class="cat">
+    <div class="cat-body"></div>
+</div>
 
 </body>
 </html>
